@@ -1,0 +1,309 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body,
+    html {
+        background-color: #000;
+        color: #fff;
+        width: 100%;
+        height: 100%;
+    }
+    
+    body {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    
+    .container-parallax {
+        width: 100%;
+        height: 100vh;
+        overflow-x: hidden;
+        overflow-y: auto;
+        perspective: 400px;
+    }
+    
+    [class*="parallax-imagens"] {
+        height: 100vh;
+        position: relative;
+        transform-style: preserve-3d;
+    }
+    
+    .img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        background-size: cover;
+    }
+    
+    .img__bg,
+    .img__1,
+    .img__2,
+    .img__3,
+    .img__4,
+    .img__5,
+    .img__6,
+    .img__7,
+    .img__8 {
+        animation-name: parallax;
+        animation-duration: 2.5s;
+        animation-delay: 1s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        transition: all 2s ease-in-out;
+    }
+    
+    @keyframes parallax {
+        0% {
+            top: 0;
+        }
+        100% {
+            top: 6rem;
+        }
+    }
+    
+    .img__bg {
+        background-image: url(/imagenes/parallax0.png);
+        transform: translateZ(-1000px) scale(4);
+    }
+    
+    .img__1 {
+        background-image: url(/imagenes/parallax1.png);
+        transform: translateZ(-950px) scale(3.6);
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        gap: 19rem;
+    }
+    
+    .parallax__title {
+        padding: 1rem 0;
+        font-size: 12rem;
+        font-weight: lighter;
+        letter-spacing: -2rem;
+    }
+    
+    .parallax__text {
+        font-size: 4rem;
+        font-weight: bold;
+        font-style: italic;
+        line-height: 3rem;
+        word-spacing: 1.2rem;
+        text-align: center;
+    }
+    
+    .img__2 {
+        background-image: url(/imagenes/parallax2.png);
+        transform: translateZ(-900px) scale(3.3);
+    }
+    
+    .img__3 {
+        background-image: url(/imagenes/parallax3.png);
+        transform: translateZ(-600px) scale(2.8);
+        z-index: 3;
+    }
+    
+    .img__4 {
+        background-image: url(/imagenes/parallax4.png);
+        transform: translateZ(-550px) scale(2.6);
+        z-index: 4;
+    }
+    
+    .img__5 {
+        background-image: url(/imagenes/parallax5.png);
+        transform: translateZ(-500px) scale(2.4);
+        z-index: 5;
+    }
+    
+    .img__6 {
+        background-image: url(/imagenes/parallax6.png);
+        transform: translateZ(-350px) scale(2);
+        z-index: 6;
+    }
+    
+    .img__7 {
+        background-image: url(/imagenes/parallax7.png);
+        transform: translateZ(-300px) scale(1.8);
+        z-index: 7;
+    }
+    
+    .img__8 {
+        background-image: url(/imagenes/parallax8.png);
+        z-index: 8;
+    }
+    /* ------------Contenedor tarjetas de información-------------- */
+    
+    .parallax-imagens__2 {
+        background-color: #210002;
+        display: flex;
+        padding-top: 10rem;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    
+    .container-cards {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        max-width: 60vw;
+        height: max-content;
+        gap: 2rem;
+    }
+    
+    .container-cards__1 {
+        display: grid;
+        /* grid-template-columns: 1fr 1fr; */
+        /* grid-template-rows: repeat(3, 1fr); */
+        /* grid-template-columns: repeat(auto-fit, minmax(min-content, 25rem)); */
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        gap: 2rem;
+        align-items: center;
+    }
+    
+    .container-cards__1 h2 {
+        font-size: 1.6rem;
+        font-weight: bold;
+        text-align: center;
+        color: white;
+        letter-spacing: .4rem;
+        word-spacing: .5rem;
+    }
+    /* ----------------Tarjeta general 1-------------- */
+    
+    .card {
+        background-color: #FEC41E;
+        border-radius: .5rem;
+        box-shadow: 2px 2px 6px rgba(212, 104, 22, 0.5);
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: all .2s ease-out;
+    }
+    
+    .card:hover {
+        background-color: #F5911C;
+        box-shadow: 4px 4px 8px rgba(212, 104, 22, 0.5);
+        transform: scale(1.05);
+    }
+    
+    .card h3 {
+        color: #210002;
+        font-size: 1.4rem;
+        font-weight: 400;
+        font-family: 'Raleway', sans-serif;
+    }
+    
+    .card h4 {
+        color: #210002;
+        font-size: 1.5rem;
+        font-family: 'Raleway', sans-serif;
+    }
+    
+    .hidden {
+        margin-top: 2rem;
+        font-family: 'Raleway', sans-serif;
+        color: #210002;
+    }
+    
+    .card-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .container-cards__2 {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    /* ----------------Tarjeta general 2-------------- */
+    
+    .card__extra {
+        background-color: #FEC41E;
+        border-radius: .5rem;
+        box-shadow: 2px 2px 6px rgba(212, 104, 22, 0.5);
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: all .2s ease-out;
+    }
+    
+    .card__extra:hover {
+        color: #fff;
+        background-color: #F5911C;
+        box-shadow: 4px 4px 8px rgba(212, 104, 22, 0.5);
+        transform: scale(1.05);
+    }
+    
+    .card__extra h3 {
+        bottom: 0;
+        color: #210002;
+        font-size: 1.4rem;
+        font-weight: 400;
+        font-family: 'Raleway', sans-serif;
+    }
+    
+    .card__extra h4 {
+        top: 0;
+        color: #210002;
+        font-size: 1.5rem;
+        font-family: 'Raleway', sans-serif;
+    }
+    
+    .card,
+    .card__extra {
+        cursor: pointer;
+    }
+    
+    .card .hidden {
+        transition: all .4s ease-in-out;
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    .card:hover>.hidden {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .card__extra .hidden {
+        transition: all .4s ease-in-out;
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    .card__extra:hover>.hidden {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .figure1 {
+        position: absolute;
+        bottom: 0;
+        left: 4%;
+    }
+    
+    .figure2 {
+        position: absolute;
+        bottom: 0;
+        left: 96%;
+    }
+    
+    .line {
+        width: 2px;
+        height: 100px;
+        background-color: #98371C;
+    }
+    
+    .line-text {
+        writing-mode: vertical-lr;
+        padding: 2rem 0;
+        margin-left: -.4rem;
+        letter-spacing: .4rem;
+    }
